@@ -1,0 +1,98 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url('../image/bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 23px;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8em;
+    width: 100%;
+    max-width: 500px;
+    padding: 6px;
+    margin: 0 0 8px;
+    border-radius: 6px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0px auto;
+  }
+  
+  .card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+  }
+  
+  .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #39813A;
+    border-radius: 6px;
+    transition: all 400ms ease;
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+  }
+  
+  .back {
+    background-image: url('../image/back.png');
+    backface-visibility: hidden;
+    cursor: pointer;
+  }
+  
+  .reveal-card {
+    transform: rotateY(180deg);
+  }
+  
+  .disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
+  }
+  
+  .restart {
+    background-color: #00b5cc;
+    border: 3px solid #b2df28;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    max-width: 190px;
+    margin: 8px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .restart:disabled {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid #969595;
+    color: #333;
+    cursor: not-allowed;
+  }
+  
+  .rankings {
+    color: #e71620;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+  }
